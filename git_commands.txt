@@ -1,1 +1,73 @@
-ss
+Git command	Two-line definition
+
+git --version	        Checks the installed Git version. Confirms Git is available on your system.
+
+git init	            Initializes a new Git repository. Starts tracking your project with Git.
+
+git clone URL	        Downloads a repository from GitHub. Creates a local copy on your system.
+
+git status	            Shows the current status of your files. Identifies modified, new and staged files.
+
+git add .	            Adds all changes to the staging area. Prepares files for the next commit.
+
+git commit -m "message"	Saves staged changes in your local repository. Adds a message describing the changes.
+
+git push origin main	Uploads local main branch commits to GitHub. Updates the remote main branch.
+
+git pull origin main	Fetches the latest changes from GitHub main. Integrates those changes into your current branch.
+
+git fetch origin	    Downloads updates from the remote repository. Does not merge them into your current branch.
+
+=============================================================================================================================
+
+Branch commands
+Git command	Two-line definition
+git branch	                        Displays local branches. Shows the branch you are currently using.
+
+git branch -a	                    Displays local and remote branches. Helps you see all available branches.
+
+git switch main	                    Switches to the main branch. Allows you to work on main.
+
+git switch -c feature1	            Creates a new branch called feature1. Automatically switches to that branch.
+
+git push -u origin feature1	        Pushes feature1 to GitHub for the first time. Sets its remote tracking branch.
+
+git branch -d feature1	            Deletes a local feature branch. Normally requires the branch to be merged.
+
+=============================================================================================================================
+Remote repository commands
+
+Git command	Two-line definition
+
+git remote -v	Displays connected remote repositories. Shows fetch and push URLs.
+
+git remote add origin URL	Connects your local repository to GitHub. Adds the remote repository as origin.
+=============================================================================================================================
+
+Pull Request (PR)
+A Pull Request is a request to merge your changes from one branch into another branch. It allows team members to review your code before merging.
+
+Example: feature1 → main
+=============================================================================================================================
+Complete real-time workflow
+
+# 1. Switch to main
+git switch main
+
+# 2. Get latest code
+git pull origin main
+
+# 3. Create a sub-branch
+git switch -c feature1
+
+# 4. Check file changes
+git status
+
+# 5. Add changes
+git add .
+
+# 6. Commit changes
+git commit -m "Updated Python code"
+
+# 7. Push sub-branch to GitHub
+git push -u origin feature1
